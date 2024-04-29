@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import NotesArea from './Components/NotesArea';
 import './App.css';
+import './Splash.css';  // Include the new CSS for splash screen
 
-function App() {
+const App = () => {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2000); // Show the splash screen for 4 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {showSplash ? (
+        <div className="splash-screen">
+          <div className="one-geo">ONE-GEO</div>
+          Interactive Note-taking Application in ReactJS
+        </div>
+      ) : (
+        <div className="app-content">
+          <NotesArea />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;

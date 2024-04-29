@@ -1,0 +1,35 @@
+.notes-area {
+    width: 75vw;
+    height: 75vh;
+    border: 1px solid black;
+    position: relative;
+  }
+  
+  .notification {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .cursor-coordinates {
+    position: absolute;
+    pointer-events: none;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+  }
+  
+
+  .notes-header {
+    text-align: center;
+    font-size: 24px;  /* You can adjust the size based on your preference */
+    font-family: Arial, sans-serif; /* Choose a font that fits your design */
+    color: #333;  /* This is a dark grey, but choose any color you like */
+    margin: 20px 0;  /* Adds space above and below the header */
+    font-weight: bold;  /* Makes the text bold */
+  }
+  

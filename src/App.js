@@ -17,8 +17,8 @@ const App = () => {
     <div className="app">
       {showSplash ? (
         <div className="splash-screen">
-          <div className="one-geo">ONE-GEO</div>
-          Interactive Note-taking Application in ReactJS
+          {/* <div className="one-geo"></div> */}
+          Advanced Interactive Note-taking Application in ReactJS
         </div>
       ) : (
         <div className="app-content">
